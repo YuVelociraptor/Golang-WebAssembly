@@ -1,0 +1,10 @@
+version: "3"
+services:
+  nginx_http:
+    image: nginx
+    container_name: golang_webassembry
+    volumes:
+      - ./public:/usr/share/nginx/html:ro
+    ports:
+      - "2998:80"
+    tty: true
